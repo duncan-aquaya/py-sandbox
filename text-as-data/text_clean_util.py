@@ -23,9 +23,6 @@ def clean_term(term, stopwords=None):
 def clean_whitespace(text):
     return " ".join(text.split())
 
-def lower_text(text):
-    return text.lower()
-
 def remove_all_punctuation(text, exceptions=None):
     """
     Does a strict remove of anything that is not a character in the Unicode

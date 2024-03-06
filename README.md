@@ -1,6 +1,12 @@
 # py-sandbox
 Python sample and scratch code
 
+## [Assurance Fund Sandbox](./assurance-fund)
+
+Code for Project W engagement with the Water Quality Assurance Fund (@Aquaya)
+
+Mostly exploratory notebooks.
+
 ## [Text-as-data](./text-as-data)
 
 Utilities for and examples of treating text as data:

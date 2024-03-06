@@ -1,0 +1,9 @@
+ipykernel
+nbformat
+pandas
+openpyxl
+geopandas
+plotly
+matplotlib
+folium
+mapclassify

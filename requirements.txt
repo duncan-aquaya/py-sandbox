@@ -7,3 +7,5 @@ plotly
 matplotlib
 folium
 mapclassify
+geopy
+tqdm

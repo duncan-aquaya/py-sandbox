@@ -1,6 +1,11 @@
 # py-sandbox
 Python sample and scratch code
 
+## [Project W Hierarchy](./hierarchy)
+
+Code for visualizing and working with the Project W Categories Hierarchy (aka "taxonomy")
+
+
 ## [Assurance Fund Sandbox](./assurance-fund)
 
 Code for Project W engagement with the Water Quality Assurance Fund (@Aquaya)

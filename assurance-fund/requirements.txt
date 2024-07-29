@@ -1,0 +1,15 @@
+pandas
+geopandas
+geopy
+tqdm
+plotly
+numpy
+mapbox
+plotly
+seaborn
+nbformat
+openpyxl
+matplotlib
+folium
+mapclassify
+ipywidgets

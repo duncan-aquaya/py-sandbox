@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_89d07670c5748605ce09c3b391b8eb22 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_89d07670c5748605ce09c3b391b8eb22" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_89d07670c5748605ce09c3b391b8eb22 = L.map(
+                "map_89d07670c5748605ce09c3b391b8eb22",
+                {
+                    center: [0.7055343, 30.1856183],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_89d07670c5748605ce09c3b391b8eb22);
+
+            
+
+        
+    
+            var tile_layer_a223babb5ccc3efa7e7cab15a4be502f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_a223babb5ccc3efa7e7cab15a4be502f.addTo(map_89d07670c5748605ce09c3b391b8eb22);
+        
+    
+            map_89d07670c5748605ce09c3b391b8eb22.fitBounds(
+                [[0.7007583, 30.1817967], [0.7103103, 30.1894399]],
+                {}
+            );
+        
+    
+        function geo_json_1326344e720fa7e59743ec960663ed61_styler(feature) {
+            switch(feature.id) {
+                case "2576": 
+                    return {"color": "#7396f5", "fillColor": "#7396f5", "fillOpacity": 0.5, "weight": 2};
+                case "4499": 
+                    return {"color": "#e0dbd8", "fillColor": "#e0dbd8", "fillOpacity": 0.5, "weight": 2};
+                case "1203": 
+                    return {"color": "#8caffe", "fillColor": "#8caffe", "fillOpacity": 0.5, "weight": 2};
+                case "2585": 
+                    return {"color": "#7a9df8", "fillColor": "#7a9df8", "fillOpacity": 0.5, "weight": 2};
+                case "4509": 
+                    return {"color": "#f4c5ad", "fillColor": "#f4c5ad", "fillOpacity": 0.5, "weight": 2};
+                case "2588": case "11": 
+                    return {"color": "#a1c0ff", "fillColor": "#a1c0ff", "fillOpacity": 0.5, "weight": 2};
+                case "1202": 
+                    return {"color": "#f6a385", "fillColor": "#f6a385", "fillOpacity": 0.5, "weight": 2};
+                case "2577": case "3": case "1201": 
+                    return {"color": "#3d50c3", "fillColor": "#3d50c3", "fillOpacity": 0.5, "weight": 2};
+                case "1208": case "4": 
+                    return {"color": "#3b4cc0", "fillColor": "#3b4cc0", "fillOpacity": 0.5, "weight": 2};
+                case "2584": 
+                    return {"color": "#5b7ae5", "fillColor": "#5b7ae5", "fillOpacity": 0.5, "weight": 2};
+                case "2578": 
+                    return {"color": "#88abfd", "fillColor": "#88abfd", "fillOpacity": 0.5, "weight": 2};
+                case "2582": 
+                    return {"color": "#779af7", "fillColor": "#779af7", "fillOpacity": 0.5, "weight": 2};
+                case "4507": 
+                    return {"color": "#f7b396", "fillColor": "#f7b396", "fillOpacity": 0.5, "weight": 2};
+                case "1199": 
+                    return {"color": "#5977e3", "fillColor": "#5977e3", "fillOpacity": 0.5, "weight": 2};
+                case "1347": 
+                    return {"color": "#a7c5fe", "fillColor": "#a7c5fe", "fillOpacity": 0.5, "weight": 2};
+                case "18": 
+                    return {"color": "#5f7fe8", "fillColor": "#5f7fe8", "fillOpacity": 0.5, "weight": 2};
+                default:
+                    return {"color": "#b40426", "fillColor": "#b40426", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_1326344e720fa7e59743ec960663ed61_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_1326344e720fa7e59743ec960663ed61_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3};
+            
+            let style = geo_json_1326344e720fa7e59743ec960663ed61_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_1326344e720fa7e59743ec960663ed61_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_1326344e720fa7e59743ec960663ed61.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_1326344e720fa7e59743ec960663ed61_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_1326344e720fa7e59743ec960663ed61 = L.geoJson(null, {
+                onEachFeature: geo_json_1326344e720fa7e59743ec960663ed61_onEachFeature,
+            
+                style: geo_json_1326344e720fa7e59743ec960663ed61_styler,
+                pointToLayer: geo_json_1326344e720fa7e59743ec960663ed61_pointToLayer,
+        });
+
+        function geo_json_1326344e720fa7e59743ec960663ed61_add (data) {
+            geo_json_1326344e720fa7e59743ec960663ed61
+                .addData(data);
+        }
+            geo_json_1326344e720fa7e59743ec960663ed61_add({"bbox": [30.1817967, 0.7007583, 30.1894399, 0.7103103], "features": [{"bbox": [30.1847732, 0.7026949, 30.1847732, 0.7026949], "geometry": {"coordinates": [30.1847732, 0.7026949], "type": "Point"}, "id": "2576", "properties": {"__folium_color": "#7396f5", "collectsample": 1, "conductivity": 128.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 18.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7026949, "longitude_wp": 30.1847732, "ph": 8.52, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 23.2, "turbidity": 1.37, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856005, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1847987, 0.7027358, 30.1847987, 0.7027358], "geometry": {"coordinates": [30.1847987, 0.7027358], "type": "Point"}, "id": "4499", "properties": {"__folium_color": "#e0dbd8", "collectsample": 1, "conductivity": 127.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 52.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7027358, "longitude_wp": 30.1847987, "ph": 7.43, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 21.0, "turbidity": 2.45, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856005, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1847839, 0.7027575, 30.1847839, 0.7027575], "geometry": {"coordinates": [30.1847839, 0.7027575], "type": "Point"}, "id": "1203", "properties": {"__folium_color": "#8caffe", "collectsample": 1, "conductivity": 87.6, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 25.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7027575, "longitude_wp": 30.1847839, "ph": 8.27, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 24.6, "turbidity": 4.26, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856005, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1852891, 0.7057386, 30.1852891, 0.7057386], "geometry": {"coordinates": [30.1852891, 0.7057386], "type": "Point"}, "id": "2585", "properties": {"__folium_color": "#7a9df8", "collectsample": 1, "conductivity": 128.1, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 20.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7057386, "longitude_wp": 30.1852891, "ph": 8.46, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 23.4, "turbidity": 1.61, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856012, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1853871, 0.7057578, 30.1853871, 0.7057578], "geometry": {"coordinates": [30.1853871, 0.7057578], "type": "Point"}, "id": "4509", "properties": {"__folium_color": "#f4c5ad", "collectsample": 1, "conductivity": 130.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 63.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7057578, "longitude_wp": 30.1853871, "ph": 8.33, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 20.9, "turbidity": 5.98, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856012, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1894399, 0.7102787, 30.1894399, 0.7102787], "geometry": {"coordinates": [30.1894399, 0.7102787], "type": "Point"}, "id": "2588", "properties": {"__folium_color": "#a1c0ff", "collectsample": 1, "conductivity": 64.6, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 31.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7102787, "longitude_wp": 30.1894399, "ph": 7.65, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 23.8, "turbidity": 3.06, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856029, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1894198, 0.7103103, 30.1894198, 0.7103103], "geometry": {"coordinates": [30.1894198, 0.7103103], "type": "Point"}, "id": "4518", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 90.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7103103, "longitude_wp": 30.1894198, "ph": 8.63, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 17.9, "turbidity": 10.1, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856029, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.189425, 0.7102717, 30.189425, 0.7102717], "geometry": {"coordinates": [30.189425, 0.7102717], "type": "Point"}, "id": "1202", "properties": {"__folium_color": "#f6a385", "collectsample": 1, "conductivity": 73.7, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 73.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7102717, "longitude_wp": 30.189425, "ph": 7.91, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 31.6, "turbidity": 3.56, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856029, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1818434, 0.7018872, 30.1818434, 0.7018872], "geometry": {"coordinates": [30.1818434, 0.7018872], "type": "Point"}, "id": "2577", "properties": {"__folium_color": "#3d50c3", "collectsample": 1, "conductivity": 663.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 1.0, "ecoli_wp_cat": 1.0, "institutional_wp": 0, "latitude_wp": 0.7018872, "longitude_wp": 30.1818434, "ph": 7.15, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 22.0, "turbidity": 0.16, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856847, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.1817967, 0.7019126, 30.1817967, 0.7019126], "geometry": {"coordinates": [30.1817967, 0.7019126], "type": "Point"}, "id": "1208", "properties": {"__folium_color": "#3b4cc0", "collectsample": 1, "conductivity": 476.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 0.0, "ecoli_wp_cat": 0.0, "institutional_wp": 0, "latitude_wp": 0.7019126, "longitude_wp": 30.1817967, "ph": 7.21, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 24.1, "turbidity": 0.33, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856847, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.1817981, 0.7018439, 30.1817981, 0.7018439], "geometry": {"coordinates": [30.1817981, 0.7018439], "type": "Point"}, "id": "3", "properties": {"__folium_color": "#3d50c3", "collectsample": 1, "conductivity": 660.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 1.0, "ecoli_wp_cat": 1.0, "institutional_wp": 0, "latitude_wp": 0.7018439, "longitude_wp": 30.1817981, "ph": 7.19, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 24.1, "turbidity": 0.87, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856847, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.1889659, 0.7044203, 30.1889659, 0.7044203], "geometry": {"coordinates": [30.1889659, 0.7044203], "type": "Point"}, "id": "2584", "properties": {"__folium_color": "#5b7ae5", "collectsample": 1, "conductivity": 339.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 11.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7044203, "longitude_wp": 30.1889659, "ph": 6.45, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 23.1, "turbidity": 0.32, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856854, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.189052, 0.7044065, 30.189052, 0.7044065], "geometry": {"coordinates": [30.189052, 0.7044065], "type": "Point"}, "id": "4511", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 336.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7044065, "longitude_wp": 30.189052, "ph": 6.8, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 21.0, "turbidity": 0.47, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856854, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.189035, 0.7044517, 30.189035, 0.7044517], "geometry": {"coordinates": [30.189035, 0.7044517], "type": "Point"}, "id": "1201", "properties": {"__folium_color": "#3d50c3", "collectsample": 1, "conductivity": 231.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 1.0, "ecoli_wp_cat": 1.0, "institutional_wp": 0, "latitude_wp": 0.7044517, "longitude_wp": 30.189035, "ph": 6.55, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 23.9, "turbidity": 0.63, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856854, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.1890521, 0.7044971, 30.1890521, 0.7044971], "geometry": {"coordinates": [30.1890521, 0.7044971], "type": "Point"}, "id": "4", "properties": {"__folium_color": "#3b4cc0", "collectsample": 1, "conductivity": 319.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 0.0, "ecoli_wp_cat": 0.0, "institutional_wp": 0, "latitude_wp": 0.7044971, "longitude_wp": 30.1890521, "ph": 6.5, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 22.2, "turbidity": 0.01, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856854, "wp_type": 9}, "type": "Feature"}, {"bbox": [30.1870108, 0.7031366, 30.1870108, 0.7031366], "geometry": {"coordinates": [30.1870108, 0.7031366], "type": "Point"}, "id": "2586", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 344.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7031366, "longitude_wp": 30.1870108, "ph": 8.39, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 22.7, "turbidity": 50.9, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856861, "wp_type": 12}, "type": "Feature"}, {"bbox": [30.1869031, 0.7030603, 30.1869031, 0.7030603], "geometry": {"coordinates": [30.1869031, 0.7030603], "type": "Point"}, "id": "4517", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 341.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7030603, "longitude_wp": 30.1869031, "ph": 8.52, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 19.9, "turbidity": 87.2, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408856861, "wp_type": 12}, "type": "Feature"}, {"bbox": [30.187056, 0.7030887, 30.187056, 0.7030887], "geometry": {"coordinates": [30.187056, 0.7030887], "type": "Point"}, "id": "1191", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 249.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7030887, "longitude_wp": 30.187056, "ph": 8.58, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 23.9, "turbidity": 197.0, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856861, "wp_type": 12}, "type": "Feature"}, {"bbox": [30.1870632, 0.7031232, 30.1870632, 0.7031232], "geometry": {"coordinates": [30.1870632, 0.7031232], "type": "Point"}, "id": "5", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 334.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7031232, "longitude_wp": 30.1870632, "ph": 8.53, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 22.6, "turbidity": 57.3, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408856861, "wp_type": 12}, "type": "Feature"}, {"bbox": [30.1836626, 0.7034848, 30.1836626, 0.7034848], "geometry": {"coordinates": [30.1836626, 0.7034848], "type": "Point"}, "id": "2578", "properties": {"__folium_color": "#88abfd", "collectsample": 1, "conductivity": 123.5, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 24.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7034848, "longitude_wp": 30.1836626, "ph": 8.26, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 22.4, "turbidity": 1.6, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408857611, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1840817, 0.700803, 30.1840817, 0.700803], "geometry": {"coordinates": [30.1840817, 0.700803], "type": "Point"}, "id": "2582", "properties": {"__folium_color": "#779af7", "collectsample": 1, "conductivity": 123.3, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 19.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.700803, "longitude_wp": 30.1840817, "ph": 8.18, "sample_date": "4/13/2022", "survey_round_wp": 0, "temperature": 24.6, "turbidity": 1.4, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408857628, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.1841676, 0.7008162, 30.1841676, 0.7008162], "geometry": {"coordinates": [30.1841676, 0.7008162], "type": "Point"}, "id": "4507", "properties": {"__folium_color": "#f7b396", "collectsample": 1, "conductivity": 129.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 69.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7008162, "longitude_wp": 30.1841676, "ph": 8.33, "sample_date": "9/22/2022", "survey_round_wp": 1, "temperature": 22.0, "turbidity": 2.1, "wateravailable": 1, "wet_season_wp": "wet", "wp_site_id": 408857628, "wp_type": 3}, "type": "Feature"}, {"bbox": [30.184121, 0.7007583, 30.184121, 0.7007583], "geometry": {"coordinates": [30.184121, 0.7007583], "type": "Point"}, "id": "1199", "properties": {"__folium_color": "#5977e3", "collectsample": 1, "conductivity": 101.1, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 10.0, "ecoli_wp_cat": 1.0, "institutional_wp": 0, "latitude_wp": 0.7007583, "longitude_wp": 30.184121, "ph": 8.01, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 26.5, "turbidity": 3.8, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408857628, "wp_type": 2}, "type": "Feature"}, {"bbox": [30.1840152, 0.7008238, 30.1840152, 0.7008238], "geometry": {"coordinates": [30.1840152, 0.7008238], "type": "Point"}, "id": "11", "properties": {"__folium_color": "#a1c0ff", "collectsample": 1, "conductivity": 131.7, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 31.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7008238, "longitude_wp": 30.1840152, "ph": 7.88, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 26.7, "turbidity": 3.56, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 408857628, "wp_type": 2}, "type": "Feature"}, {"bbox": [30.1844517, 0.702325, 30.1844517, 0.702325], "geometry": {"coordinates": [30.1844517, 0.702325], "type": "Point"}, "id": "1347", "properties": {"__folium_color": "#a7c5fe", "collectsample": 1, "conductivity": 96.8, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 33.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.702325, "longitude_wp": 30.1844517, "ph": 7.65, "sample_date": "7/21/2023", "survey_round_wp": 2, "temperature": 26.0, "turbidity": 5.29, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 624289117, "wp_type": 2}, "type": "Feature"}, {"bbox": [30.1844336, 0.7023598, 30.1844336, 0.7023598], "geometry": {"coordinates": [30.1844336, 0.7023598], "type": "Point"}, "id": "18", "properties": {"__folium_color": "#5f7fe8", "collectsample": 1, "conductivity": 134.1, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 12.0, "ecoli_wp_cat": 2.0, "institutional_wp": 0, "latitude_wp": 0.7023598, "longitude_wp": 30.1844336, "ph": 7.88, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 25.5, "turbidity": 2.8, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 624289117, "wp_type": 2}, "type": "Feature"}, {"bbox": [30.1894392, 0.7100355, 30.1894392, 0.7100355], "geometry": {"coordinates": [30.1894392, 0.7100355], "type": "Point"}, "id": "568", "properties": {"__folium_color": "#b40426", "collectsample": 1, "conductivity": 250.0, "country_wp": "Uganda", "district_wp": "Kabarole", "ea_code_wp": "204", "ea_wp": "BUTUULYA  LOWER", "ecoli_wp": 101.0, "ecoli_wp_cat": 3.0, "institutional_wp": 0, "latitude_wp": 0.7100355, "longitude_wp": 30.1894392, "ph": 8.41, "sample_date": "1/29/2024", "survey_round_wp": 3, "temperature": 21.9, "turbidity": 93.6, "wateravailable": 1, "wet_season_wp": "dry", "wp_site_id": 704303447, "wp_type": 12}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_1326344e720fa7e59743ec960663ed61.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["country_wp", "district_wp", "sample_date", "ea_wp", "ea_code_wp", "wp_site_id", "wp_type", "institutional_wp", "wateravailable", "collectsample", "survey_round_wp", "wet_season_wp", "ph", "conductivity", "temperature", "turbidity", "ecoli_wp", "ecoli_wp_cat"];
+    let aliases = ["country_wp", "district_wp", "sample_date", "ea_wp", "ea_code_wp", "wp_site_id", "wp_type", "institutional_wp", "wateravailable", "collectsample", "survey_round_wp", "wet_season_wp", "ph", "conductivity", "temperature", "turbidity", "ecoli_wp", "ecoli_wp_cat"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+    geo_json_1326344e720fa7e59743ec960663ed61.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["country_wp", "district_wp", "sample_date", "ea_wp", "wp_site_id", "wp_type", "wet_season_wp", "ecoli_wp", "ecoli_wp_cat"];
+    let aliases = ["country_wp", "district_wp", "sample_date", "ea_wp", "wp_site_id", "wp_type", "wet_season_wp", "ecoli_wp", "ecoli_wp_cat"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumpopup"});
+                     
+    
+            geo_json_1326344e720fa7e59743ec960663ed61.addTo(map_89d07670c5748605ce09c3b391b8eb22);
+        
+    
+    var color_map_d4c99222206eafa959e2c2ec65fc9b86 = {};
+
+    
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.color = d3.scale.threshold()
+              .domain([0.0, 0.20240480961923848, 0.40480961923847697, 0.6072144288577155, 0.8096192384769539, 1.0120240480961924, 1.214428857715431, 1.4168336673346693, 1.6192384769539079, 1.8216432865731462, 2.024048096192385, 2.226452905811623, 2.428857715430862, 2.6312625250501003, 2.8336673346693386, 3.036072144288577, 3.2384769539078158, 3.440881763527054, 3.6432865731462925, 3.8456913827655312, 4.04809619238477, 4.250501002004008, 4.452905811623246, 4.655310621242485, 4.857715430861724, 5.060120240480962, 5.2625250501002006, 5.4649298597194385, 5.667334669338677, 5.869739478957916, 6.072144288577154, 6.274549098196393, 6.4769539078156315, 6.679358717434869, 6.881763527054108, 7.084168336673347, 7.286573146292585, 7.488977955911824, 7.6913827655310625, 7.8937875751503, 8.09619238476954, 8.298597194388778, 8.501002004008017, 8.703406813627254, 8.905811623246493, 9.108216432865731, 9.31062124248497, 9.513026052104209, 9.715430861723448, 9.917835671342685, 10.120240480961924, 10.322645290581162, 10.525050100200401, 10.72745490981964, 10.929859719438877, 11.132264529058116, 11.334669338677354, 11.537074148296593, 11.739478957915832, 11.94188376753507, 12.144288577154308, 12.346693386773547, 12.549098196392785, 12.751503006012024, 12.953907815631263, 13.156312625250502, 13.358717434869739, 13.561122244488978, 13.763527054108216, 13.965931863727455, 14.168336673346694, 14.370741482965931, 14.57314629258517, 14.775551102204409, 14.977955911823647, 15.180360721442886, 15.382765531062125, 15.585170340681362, 15.7875751503006, 15.98997995991984, 16.19238476953908, 16.394789579158317, 16.597194388777556, 16.799599198396795, 17.002004008016034, 17.204408817635272, 17.406813627254508, 17.609218436873746, 17.811623246492985, 18.014028056112224, 18.216432865731463, 18.4188376753507, 18.62124248496994, 18.82364729458918, 19.026052104208418, 19.228456913827657, 19.430861723446895, 19.63326653306613, 19.83567134268537, 20.03807615230461, 20.240480961923847, 20.442885771543086, 20.645290581162325, 20.847695390781563, 21.050100200400802, 21.25250501002004, 21.45490981963928, 21.65731462925852, 21.859719438877754, 22.062124248496993, 22.26452905811623, 22.46693386773547, 22.66933867735471, 22.871743486973948, 23.074148296593187, 23.276553106212425, 23.478957915831664, 23.681362725450903, 23.88376753507014, 24.08617234468938, 24.288577154308616, 24.490981963927855, 24.693386773547093, 24.895791583166332, 25.09819639278557, 25.30060120240481, 25.50300601202405, 25.705410821643287, 25.907815631262526, 26.110220440881765, 26.312625250501004, 26.51503006012024, 26.717434869739478, 26.919839679358716, 27.122244488977955, 27.324649298597194, 27.527054108216433, 27.72945891783567, 27.93186372745491, 28.13426853707415, 28.336673346693388, 28.539078156312627, 28.741482965931862, 28.9438877755511, 29.14629258517034, 29.34869739478958, 29.551102204408817, 29.753507014028056, 29.955911823647295, 30.158316633266534, 30.360721442885772, 30.56312625250501, 30.76553106212425, 30.96793587174349, 31.170340681362724, 31.372745490981963, 31.5751503006012, 31.77755511022044, 31.97995991983968, 32.18236472945892, 32.38476953907816, 32.587174348697395, 32.789579158316634, 32.99198396793587, 33.19438877755511, 33.39679358717435, 33.59919839679359, 33.80160320641283, 34.00400801603207, 34.206412825651306, 34.408817635270545, 34.611222444889776, 34.813627254509015, 35.016032064128254, 35.21843687374749, 35.42084168336673, 35.62324649298597, 35.82565130260521, 36.02805611222445, 36.23046092184369, 36.432865731462925, 36.635270541082164, 36.8376753507014, 37.04008016032064, 37.24248496993988, 37.44488977955912, 37.64729458917836, 37.8496993987976, 38.052104208416836, 38.254509018036075, 38.45691382765531, 38.65931863727455, 38.86172344689379, 39.06412825651302, 39.26653306613226, 39.4689378757515, 39.67134268537074, 39.87374749498998, 40.07615230460922, 40.278557114228455, 40.480961923847694, 40.68336673346693, 40.88577154308617, 41.08817635270541, 41.29058116232465, 41.49298597194389, 41.69539078156313, 41.897795591182366, 42.100200400801604, 42.30260521042084, 42.50501002004008, 42.70741482965932, 42.90981963927856, 43.1122244488978, 43.31462925851704, 43.517034068136276, 43.71943887775551, 43.921843687374746, 44.124248496993985, 44.326653306613224, 44.52905811623246, 44.7314629258517, 44.93386773547094, 45.13627254509018, 45.33867735470942, 45.54108216432866, 45.743486973947896, 45.945891783567134, 46.14829659318637, 46.35070140280561, 46.55310621242485, 46.75551102204409, 46.95791583166333, 47.16032064128257, 47.362725450901806, 47.565130260521045, 47.76753507014028, 47.96993987975952, 48.17234468937876, 48.37474949899799, 48.57715430861723, 48.77955911823647, 48.98196392785571, 49.18436873747495, 49.38677354709419, 49.589178356713425, 49.791583166332664, 49.9939879759519, 50.19639278557114, 50.39879759519038, 50.60120240480962, 50.80360721442886, 51.0060120240481, 51.208416833667336, 51.410821643286575, 51.61322645290581, 51.81563126252505, 52.01803607214429, 52.22044088176353, 52.42284569138277, 52.62525050100201, 52.82765531062124, 53.03006012024048, 53.23246492985972, 53.434869739478955, 53.637274549098194, 53.83967935871743, 54.04208416833667, 54.24448897795591, 54.44689378757515, 54.64929859719439, 54.85170340681363, 55.054108216432866, 55.256513026052104, 55.45891783567134, 55.66132264529058, 55.86372745490982, 56.06613226452906, 56.2685370741483, 56.47094188376754, 56.673346693386776, 56.875751503006015, 57.078156312625254, 57.28056112224449, 57.482965931863724, 57.68537074148296, 57.8877755511022, 58.09018036072144, 58.29258517034068, 58.49498997995992, 58.69739478957916, 58.899799599198396, 59.102204408817634, 59.30460921843687, 59.50701402805611, 59.70941883767535, 59.91182364729459, 60.11422845691383, 60.31663326653307, 60.519038076152306, 60.721442885771545, 60.92384769539078, 61.12625250501002, 61.32865731462926, 61.5310621242485, 61.73346693386774, 61.93587174348698, 62.13827655310621, 62.34068136272545, 62.54308617234469, 62.745490981963925, 62.947895791583164, 63.1503006012024, 63.35270541082164, 63.55511022044088, 63.75751503006012, 63.95991983967936, 64.1623246492986, 64.36472945891784, 64.56713426853707, 64.76953907815631, 64.97194388777555, 65.17434869739479, 65.37675350701403, 65.57915831663327, 65.78156312625251, 65.98396793587175, 66.18637274549098, 66.38877755511022, 66.59118236472946, 66.7935871743487, 66.99599198396794, 67.19839679358718, 67.40080160320642, 67.60320641282566, 67.8056112224449, 68.00801603206413, 68.21042084168337, 68.41282565130261, 68.61523046092185, 68.81763527054109, 69.02004008016031, 69.22244488977955, 69.42484969939879, 69.62725450901803, 69.82965931863727, 70.03206412825651, 70.23446893787575, 70.43687374749499, 70.63927855711422, 70.84168336673346, 71.0440881763527, 71.24649298597194, 71.44889779559118, 71.65130260521042, 71.85370741482966, 72.0561122244489, 72.25851703406813, 72.46092184368737, 72.66332665330661, 72.86573146292585, 73.06813627254509, 73.27054108216433, 73.47294589178357, 73.6753507014028, 73.87775551102204, 74.08016032064128, 74.28256513026052, 74.48496993987976, 74.687374749499, 74.88977955911824, 75.09218436873748, 75.29458917835672, 75.49699398797596, 75.6993987975952, 75.90180360721443, 76.10420841683367, 76.30661322645291, 76.50901803607215, 76.71142284569139, 76.91382765531063, 77.11623246492987, 77.3186372745491, 77.52104208416834, 77.72344689378758, 77.92585170340682, 78.12825651302605, 78.33066132264528, 78.53306613226452, 78.73547094188376, 78.937875751503, 79.14028056112224, 79.34268537074148, 79.54509018036072, 79.74749498997996, 79.9498997995992, 80.15230460921843, 80.35470941883767, 80.55711422845691, 80.75951903807615, 80.96192384769539, 81.16432865731463, 81.36673346693387, 81.5691382765531, 81.77154308617234, 81.97394789579158, 82.17635270541082, 82.37875751503006, 82.5811623246493, 82.78356713426854, 82.98597194388778, 83.18837675350701, 83.39078156312625, 83.59318637274549, 83.79559118236473, 83.99799599198397, 84.20040080160321, 84.40280561122245, 84.60521042084169, 84.80761523046093, 85.01002004008016, 85.2124248496994, 85.41482965931864, 85.61723446893788, 85.81963927855712, 86.02204408817636, 86.2244488977956, 86.42685370741484, 86.62925851703407, 86.83166332665331, 87.03406813627255, 87.23647294589178, 87.43887775551102, 87.64128256513025, 87.84368737474949, 88.04609218436873, 88.24849699398797, 88.45090180360721, 88.65330661322645, 88.85571142284569, 89.05811623246493, 89.26052104208416, 89.4629258517034, 89.66533066132264, 89.86773547094188, 90.07014028056112, 90.27254509018036, 90.4749498997996, 90.67735470941884, 90.87975951903807, 91.08216432865731, 91.28456913827655, 91.48697394789579, 91.68937875751503, 91.89178356713427, 92.09418837675351, 92.29659318637275, 92.49899799599199, 92.70140280561122, 92.90380761523046, 93.1062124248497, 93.30861723446894, 93.51102204408818, 93.71342685370742, 93.91583166332666, 94.1182364729459, 94.32064128256513, 94.52304609218437, 94.72545090180361, 94.92785571142285, 95.13026052104209, 95.33266533066133, 95.53507014028057, 95.7374749498998, 95.93987975951904, 96.14228456913828, 96.34468937875752, 96.54709418837675, 96.74949899799599, 96.95190380761522, 97.15430861723446, 97.3567134268537, 97.55911823647294, 97.76152304609218, 97.96392785571142, 98.16633266533066, 98.3687374749499, 98.57114228456913, 98.77354709418837, 98.97595190380761, 99.17835671342685, 99.38076152304609, 99.58316633266533, 99.78557114228457, 99.9879759519038, 100.19038076152304, 100.39278557114228, 100.59519038076152, 100.79759519038076, 101.0])
+              .range(['#3b4cc0ff', '#3b4dc1ff', '#3c4ec2ff', '#3c4fc3ff', '#3d50c3ff', '#3d50c4ff', '#3e51c5ff', '#3e52c6ff', '#3f53c6ff', '#3f54c7ff', '#4055c8ff', '#4156c9ff', '#4257caff', '#4257cbff', '#4358cbff', '#4359ccff', '#445acdff', '#445bceff', '#455ccfff', '#455dcfff', '#465ed0ff', '#475fd1ff', '#485fd2ff', '#4960d2ff', '#4961d3ff', '#4a62d3ff', '#4a63d4ff', '#4b64d5ff', '#4b65d6ff', '#4c66d6ff', '#4c67d7ff', '#4d68d8ff', '#4e68d9ff', '#4f69d9ff', '#4f6adaff', '#506bdaff', '#506cdbff', '#516ddbff', '#526ddcff', '#536eddff', '#536fdeff', '#5470deff', '#5471dfff', '#5572dfff', '#5572e0ff', '#5673e0ff', '#5774e1ff', '#5875e1ff', '#5876e2ff', '#5977e3ff', '#5978e4ff', '#5a78e4ff', '#5a79e5ff', '#5b7ae5ff', '#5c7be6ff', '#5d7ce7ff', '#5d7de7ff', '#5e7de8ff', '#5f7ee8ff', '#5f7fe9ff', '#6080e9ff', '#6180eaff', '#6281eaff', '#6282ebff', '#6383ebff', '#6384ecff', '#6485ecff', '#6486edff', '#6587edff', '#6687eeff', '#6788eeff', '#6789efff', '#688aefff', '#698aefff', '#6a8befff', '#6a8cf0ff', '#6b8df0ff', '#6b8ef1ff', '#6c8ff1ff', '#6d8ff2ff', '#6e90f2ff', '#6e91f3ff', '#6f92f3ff', '#6f92f3ff', '#7093f3ff', '#7194f4ff', '#7295f4ff', '#7296f5ff', '#7396f5ff', '#7497f6ff', '#7597f6ff', '#7598f6ff', '#7699f6ff', '#769af7ff', '#779af8ff', '#789bf8ff', '#799cf8ff', '#7a9df8ff', '#7a9df9ff', '#7b9ef9ff', '#7b9ff9ff', '#7ca0f9ff', '#7da0faff', '#7ea1faff', '#7ea1faff', '#7fa2faff', '#80a3fbff', '#81a4fbff', '#81a5fbff', '#82a6fbff', '#82a6fcff', '#83a7fcff', '#84a7fcff', '#85a8fcff', '#85a8fcff', '#86a9fcff', '#87aafdff', '#88abfdff', '#88abfdff', '#89acfdff', '#8aacfdff', '#8badfdff', '#8baefeff', '#8caffeff', '#8cb0feff', '#8db0feff', '#8eb1feff', '#8fb1feff', '#8fb2feff', '#90b2feff', '#91b3feff', '#92b4feff', '#93b5feff', '#93b5feff', '#94b6ffff', '#94b6ffff', '#95b7ffff', '#96b7ffff', '#97b8ffff', '#97b8ffff', '#98b9ffff', '#98b9ffff', '#99baffff', '#9abbffff', '#9bbcffff', '#9bbcffff', '#9cbdffff', '#9dbdffff', '#9ebeffff', '#9ebeffff', '#9fbfffff', '#9fbfffff', '#a0c0ffff', '#a1c0ffff', '#a2c1ffff', '#a2c1ffff', '#a3c2ffff', '#a4c2feff', '#a5c3feff', '#a5c4feff', '#a6c4feff', '#a6c5feff', '#a7c5feff', '#a8c6feff', '#a9c6feff', '#a9c7fdff', '#aac7fdff', '#abc8fdff', '#abc8fdff', '#acc9fdff', '#adc9fdff', '#aec9fdff', '#aec9fdff', '#afcafcff', '#afcafcff', '#b0cbfcff', '#b1cbfcff', '#b2ccfcff', '#b2ccfcff', '#b3cdfbff', '#b3cdfbff', '#b4cdfbff', '#b5cdfaff', '#b6cefaff', '#b6cefaff', '#b7cffaff', '#b7cff9ff', '#b8d0f9ff', '#b9d0f9ff', '#bad0f9ff', '#bad0f8ff', '#bbd1f8ff', '#bbd1f8ff', '#bcd2f8ff', '#bdd2f7ff', '#bed2f7ff', '#bed2f6ff', '#bfd3f6ff', '#bfd4f6ff', '#c0d4f6ff', '#c0d4f5ff', '#c1d4f5ff', '#c2d5f4ff', '#c3d5f4ff', '#c4d5f4ff', '#c4d5f4ff', '#c5d6f3ff', '#c5d6f3ff', '#c6d6f2ff', '#c6d6f2ff', '#c7d7f1ff', '#c7d7f1ff', '#c8d7f0ff', '#c9d7f0ff', '#cad8f0ff', '#cad8f0ff', '#cbd8efff', '#cbd8efff', '#ccd9eeff', '#ccd9eeff', '#cdd9edff', '#cdd9ecff', '#cedaecff', '#cedaebff', '#cfdaebff', '#cfdaeaff', '#d0daeaff', '#d1dae9ff', '#d2dbe9ff', '#d2dbe8ff', '#d3dbe8ff', '#d3dbe7ff', '#d4dbe7ff', '#d4dbe6ff', '#d5dbe6ff', '#d5dbe5ff', '#d6dce5ff', '#d6dce4ff', '#d7dce4ff', '#d7dce3ff', '#d8dce3ff', '#d9dce2ff', '#d9dce2ff', '#dadce1ff', '#dadce1ff', '#dbdce0ff', '#dbdcdfff', '#dcdddeff', '#dcdddeff', '#ddddddff', '#ddddddff', '#dedcdcff', '#dedcdcff', '#dfdcdbff', '#dfdcdaff', '#e0dbd9ff', '#e0dbd9ff', '#e1dbd8ff', '#e1dbd7ff', '#e2dad6ff', '#e2dad5ff', '#e3dad5ff', '#e3d9d4ff', '#e4d9d3ff', '#e4d9d2ff', '#e5d9d2ff', '#e5d8d1ff', '#e6d8d0ff', '#e6d7cfff', '#e7d7cfff', '#e7d7ceff', '#e8d7cdff', '#e8d6ccff', '#e9d6ccff', '#e9d5cbff', '#ead5caff', '#ead5c9ff', '#ead5c9ff', '#ead4c8ff', '#ebd4c7ff', '#ecd3c6ff', '#ecd3c6ff', '#edd3c5ff', '#edd3c4ff', '#edd2c3ff', '#edd2c3ff', '#eed1c2ff', '#eed1c1ff', '#efd0c0ff', '#efd0c0ff', '#efcfbfff', '#efcfbeff', '#f0cebdff', '#f0cebcff', '#f1cdbbff', '#f1cdbaff', '#f1cdbaff', '#f1cdb9ff', '#f2ccb8ff', '#f2ccb7ff', '#f2cbb7ff', '#f2cab6ff', '#f2cab5ff', '#f2c9b4ff', '#f3c9b4ff', '#f3c8b2ff', '#f3c8b2ff', '#f3c7b1ff', '#f4c7b0ff', '#f4c6afff', '#f4c6aeff', '#f4c5adff', '#f5c5adff', '#f5c4acff', '#f5c3abff', '#f5c2aaff', '#f5c2aaff', '#f5c1a9ff', '#f5c1a8ff', '#f5c0a7ff', '#f6c0a7ff', '#f6bfa6ff', '#f6bfa5ff', '#f6bea4ff', '#f6bea3ff', '#f7bda2ff', '#f7bda2ff', '#f7bca1ff', '#f7bba0ff', '#f7ba9fff', '#f7ba9eff', '#f7b99eff', '#f7b99dff', '#f7b89cff', '#f7b89bff', '#f7b79bff', '#f7b69aff', '#f7b599ff', '#f7b498ff', '#f7b497ff', '#f7b396ff', '#f7b396ff', '#f7b295ff', '#f7b194ff', '#f7b093ff', '#f7b092ff', '#f7af91ff', '#f7af91ff', '#f7ae90ff', '#f7ad8fff', '#f7ac8eff', '#f7ab8dff', '#f7aa8cff', '#f7aa8cff', '#f7a98bff', '#f7a98aff', '#f7a889ff', '#f7a789ff', '#f7a688ff', '#f7a687ff', '#f6a586ff', '#f6a486ff', '#f6a385ff', '#f6a384ff', '#f6a283ff', '#f6a182ff', '#f5a081ff', '#f5a080ff', '#f59f80ff', '#f59e7fff', '#f59d7eff', '#f59d7dff', '#f59c7dff', '#f59b7cff', '#f49a7bff', '#f4997aff', '#f4987aff', '#f49779ff', '#f39778ff', '#f39677ff', '#f39577ff', '#f39476ff', '#f39475ff', '#f39374ff', '#f29273ff', '#f29172ff', '#f29072ff', '#f28f71ff', '#f18f70ff', '#f18d6fff', '#f18c6fff', '#f18b6eff', '#f08b6dff', '#f08a6cff', '#f0896cff', '#f0886bff', '#ef876aff', '#ef8669ff', '#ee8569ff', '#ee8468ff', '#ee8467ff', '#ee8366ff', '#ed8265ff', '#ec8165ff', '#ec8064ff', '#ec7f63ff', '#ec7e62ff', '#eb7d62ff', '#eb7c61ff', '#ea7b60ff', '#ea7a5fff', '#e97a5fff', '#e9795eff', '#e9785dff', '#e9775cff', '#e8765cff', '#e8755bff', '#e7745bff', '#e7735aff', '#e67259ff', '#e67158ff', '#e57058ff', '#e56f57ff', '#e46e56ff', '#e46d55ff', '#e36c55ff', '#e36b54ff', '#e36b53ff', '#e36952ff', '#e26852ff', '#e26751ff', '#e16650ff', '#e1654fff', '#e0644fff', '#e0634eff', '#df624eff', '#df614dff', '#de604cff', '#de5f4bff', '#dd5e4aff', '#dd5d4aff', '#dc5c49ff', '#db5a49ff', '#da5948ff', '#d95847ff', '#d95746ff', '#d85646ff', '#d85545ff', '#d75445ff', '#d75344ff', '#d65244ff', '#d65143ff', '#d55042ff', '#d54f41ff', '#d44e41ff', '#d34c40ff', '#d24b40ff', '#d24a3fff', '#d1493fff', '#d1483eff', '#d0473dff', '#d0463cff', '#cf443cff', '#ce433bff', '#cd423bff', '#cd413aff', '#cc3f39ff', '#cc3e38ff', '#cb3d38ff', '#cb3c37ff', '#ca3a37ff', '#c93936ff', '#c83736ff', '#c83635ff', '#c73534ff', '#c63334ff', '#c53233ff', '#c53032ff', '#c42f31ff', '#c32e31ff', '#c32d30ff', '#c22b30ff', '#c12a2fff', '#c0282fff', '#c0262eff', '#bf242eff', '#be222dff', '#bd1f2dff', '#bc1d2cff', '#bb1b2cff', '#bb192bff', '#ba162bff', '#b9142aff', '#b8122aff', '#b80f29ff', '#b70d28ff', '#b60b27ff', '#b50927ff', '#b50626ff', '#b40426ff']);
+    
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.x = d3.scale.linear()
+              .domain([0.0, 101.0])
+              .range([0, 450 - 50]);
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.legend = L.control({position: 'topright'});
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.legend.onAdd = function (map) {var div = L.DomUtil.create('div', 'legend'); return div};
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.legend.addTo(map_89d07670c5748605ce09c3b391b8eb22);
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.xAxis = d3.svg.axis()
+        .scale(color_map_d4c99222206eafa959e2c2ec65fc9b86.x)
+        .orient("top")
+        .tickSize(1)
+        .tickValues([0.0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 10.298039215686275, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 20.59607843137255, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 30.894117647058824, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 41.1921568627451, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 51.490196078431374, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 61.78823529411765, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 72.08627450980393, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 82.3843137254902, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 92.68235294117648, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']);
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.svg = d3.select(".legend.leaflet-control").append("svg")
+        .attr("id", 'legend')
+        .attr("width", 450)
+        .attr("height", 40);
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.g = color_map_d4c99222206eafa959e2c2ec65fc9b86.svg.append("g")
+        .attr("class", "key")
+        .attr("transform", "translate(25,16)");
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.g.selectAll("rect")
+        .data(color_map_d4c99222206eafa959e2c2ec65fc9b86.color.range().map(function(d, i) {
+          return {
+            x0: i ? color_map_d4c99222206eafa959e2c2ec65fc9b86.x(color_map_d4c99222206eafa959e2c2ec65fc9b86.color.domain()[i - 1]) : color_map_d4c99222206eafa959e2c2ec65fc9b86.x.range()[0],
+            x1: i < color_map_d4c99222206eafa959e2c2ec65fc9b86.color.domain().length ? color_map_d4c99222206eafa959e2c2ec65fc9b86.x(color_map_d4c99222206eafa959e2c2ec65fc9b86.color.domain()[i]) : color_map_d4c99222206eafa959e2c2ec65fc9b86.x.range()[1],
+            z: d
+          };
+        }))
+      .enter().append("rect")
+        .attr("height", 40 - 30)
+        .attr("x", function(d) { return d.x0; })
+        .attr("width", function(d) { return d.x1 - d.x0; })
+        .style("fill", function(d) { return d.z; });
+
+    color_map_d4c99222206eafa959e2c2ec65fc9b86.g.call(color_map_d4c99222206eafa959e2c2ec65fc9b86.xAxis).append("text")
+        .attr("class", "caption")
+        .attr("y", 21)
+        .text("ecoli_wp");
+    
+            tile_layer_a223babb5ccc3efa7e7cab15a4be502f.addTo(map_89d07670c5748605ce09c3b391b8eb22);
+        
+    
+            geo_json_1326344e720fa7e59743ec960663ed61.addTo(map_89d07670c5748605ce09c3b391b8eb22);
+        
+</script>
+</html>

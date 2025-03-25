@@ -12,6 +12,12 @@ Code for Project W engagement with the Water Quality Assurance Fund (@Aquaya)
 
 Mostly exploratory notebooks.
 
+## [Assurance Fund - Kenya Expansion](./wqaf-kenya)
+
+Code for Water Quality Assurance Fund - Kenya Expansion. Brief TODO: should move all WQAF code into its own repo.
+
+Notebooks for data exploration and plotting, as well as geo-functions (proximity assignment) and analysis
+
 ## [Text-as-data](./text-as-data)
 
 Utilities for and examples of treating text as data:

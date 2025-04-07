@@ -31,3 +31,15 @@ selected_labs = [
     "Eldoret Water And Sanitation Company Limited",
     "Nyeri Water and Sanitation Company"
 ]
+
+
+# UNOCHA COD-PP Data Config
+codpp_cols = ['NEWDLAT', 'NEWDLONG', "FULL_NAME", "ADM1", 'DISTRICT', 'REGION', 'LOCATION',
+              'SUB_LOCATI', 'geometry']
+
+codpp_county_map = {
+    "E. Marakwet": "Elgeyo-Marakwet",
+    "Muranga": "Murang'a",
+    "Taita Tavet": "Taita Taveta",
+}
+

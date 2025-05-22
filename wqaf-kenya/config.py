@@ -2,6 +2,18 @@
 Config module for WQAF Kenya Expansion
 """
 
+study_counties = [
+    "Nakuru",
+    "Uasin Gishu",
+    "Kericho",
+]
+
+study_labs = [
+    "Eldoret Water And Sanitation Company Limited",
+    "Nakuru Water and Sanitation Services Company Limited",
+    "Kisumu Water and Sanitation Company Limited (KIWASCO)",
+]
+
 primary_counties = [
     "Nakuru",
     "Mombasa",

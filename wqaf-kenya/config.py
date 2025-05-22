@@ -2,6 +2,9 @@
 Config module for WQAF Kenya Expansion
 """
 
+CRS = "EPSG:4326"
+CRS_ALT = "EPSG:21037"
+
 study_counties = [
     "Nakuru",
     "Uasin Gishu",
